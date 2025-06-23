@@ -4,7 +4,7 @@ from sodapy import Socrata
 
 client = Socrata("data.cityofnewyork.us", None)
 
-def fetch_vehicle_collisions():
+def fetch_vehicle_collisions_crashes():
     """
     Fetch vehicle collisions data from NYC Open Data.
     """
@@ -20,7 +20,7 @@ def fetch_emergency_responses():
     return pd.DataFrame.from_records(results)
 
 
-def fetch_crime_data():
+def fetch_arrest_data():
     """
     Fetch crime data from NYC Open Data.
     """
