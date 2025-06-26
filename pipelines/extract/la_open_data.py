@@ -4,18 +4,18 @@ from sodapy import Socrata
 
 client = Socrata("data.lacity.org", None)
 
-def fetch_crime_data():
+def fetch_crime_data(offset=0, limit=5000):
     """
     Fetch crime data from LA Open Data.
     """
-    results = client.get("2nrs-mtv8", limit=5000)
+    results = client.get("2nrs-mtv8", limit=limit, offset=offset)
     return pd.DataFrame.from_records(results)
 
-def fetch_traffic_collisions():
+def fetch_traffic_collisions(offset=0, limit=5000):
     """
     Fetch traffic collisions data from LA Open Data.
     """
-    results = client.get("d5tf-ez2w", limit=5000)
+    results = client.get("d5tf-ez2w", limit=limit, offset=offset)
     return pd.DataFrame.from_records(results)
 
 
