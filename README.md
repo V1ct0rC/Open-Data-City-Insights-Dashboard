@@ -2,6 +2,10 @@
 
 This repository contains implementations for a city dashboard that organizes and displays data from open APIs. The interface is built using Python and the Streamlit framework, which allows for easy creation of interactive web applications. All data is fetched from various open APIs and saved in Google Cloud Platform's BigQuery service. The dashboard provides a user-friendly interface to visualize this data, making it accessible and understandable for users.
 
+![Main Page 1](assets/asset_1.png)
+
+![Main Page 2](assets/asset_2.png)
+
 In oder to run the dashboard, you need to have Python installed on your machine (I used 3.12). With Python installed, you can create a virtual environment and install the required packages.
 
 ```bash

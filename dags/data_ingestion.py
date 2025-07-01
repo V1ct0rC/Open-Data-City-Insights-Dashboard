@@ -62,10 +62,10 @@ from pipelines.load.load_to_db import *
 if __name__ == "__main__":
     # For testing the pipeline locally
     print("Testing emergency responses pipeline...")
-    df = fetch_arrest_data(offset=0, limit=500)
+    df = fetch_emergency_responses(offset=0, limit=500)
     print(df.head())
 
-    transformed_df = transform_arrest_data(df)
+    transformed_df = transform_emergency_responses(df)
     print(transformed_df.head())
 
-    load_to_bigquery_db(transformed_df, 'raw_nyc_arrest_data')
+    load_to_bigquery_db(transformed_df, 'raw_nyc_emergency_responses')
