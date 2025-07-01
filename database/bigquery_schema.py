@@ -13,6 +13,7 @@ raw_nyc_vehicle_collisions_crashes = [
 ]
 
 raw_nyc_emergency_responses = [
+    {"name": "response_id", "type": "STRING", "mode": "REQUIRED"},  # Added primary key
     {"name": "creation_date", "type": "TIMESTAMP", "mode": "NULLABLE"},
     {"name": "closed_date", "type": "TIMESTAMP", "mode": "NULLABLE"},
     {"name": "latitude", "type": "FLOAT", "mode": "NULLABLE"},
